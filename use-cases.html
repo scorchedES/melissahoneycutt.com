@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate AI Use Cases — Sample Systems | Melissa Honeycutt</title>
+<meta name="description" content="Sample AI systems for real estate businesses: lead follow-up, listing marketing, buyer consultation and client communication. Built around real business problems with human review.">
+<link rel="canonical" href="https://melissahoneycutt.com/use-cases.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Melissa Honeycutt">
+<meta property="og:title" content="Real Estate AI Use Cases - Sample Systems | Melissa Honeycutt">
+<meta property="og:description" content="Sample AI systems for real estate businesses: lead follow-up, listing marketing, buyer consultation, client communication, and human review workflows.">
+<meta property="og:url" content="https://melissahoneycutt.com/use-cases.html">
+<meta property="og:image" content="https://melissahoneycutt.com/assets/images/melissa-honeycutt.png">
+<meta property="og:image:alt" content="Portrait of Melissa Honeycutt, licensed Florida broker and AI implementation strategist">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Real Estate AI Use Cases - Sample Systems | Melissa Honeycutt">
+<meta name="twitter:description" content="Sample AI systems for real estate businesses: lead follow-up, listing marketing, buyer consultation, client communication, and human review workflows.">
+<meta name="twitter:image" content="https://melissahoneycutt.com/assets/images/melissa-honeycutt.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  .page-hero {
+    padding-top: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+    border-bottom: 1px solid var(--border);
+  }
+  .page-hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.04;
+    max-width: 14ch;
+    margin-bottom: 24px;
+  }
+  .page-hero h1 em { color: var(--gold-deep); font-style: normal; }
+  .page-hero .lede { max-width: 56ch; font-size: clamp(1.1rem, 1.5vw, 1.25rem); color: var(--ink); }
+  .page-hero .frame {
+    margin-top: 28px;
+    background: var(--cream-warm);
+    border-radius: 16px;
+    padding: 20px 26px;
+    font-size: 0.97rem;
+    color: var(--ink);
+    line-height: 1.65;
+    max-width: 720px;
+  }
+  .page-hero .frame strong { font-weight: 600; }
+
+  /* Anchor scroll padding so headings clear sticky nav */
+  .uc-section { scroll-margin-top: 84px; }
+
+  /* Use case sections — alternating */
+  .uc-section {
+    padding-top: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    border-bottom: 1px solid var(--border);
+  }
+  .uc-section.warm { background: var(--cream-warm); }
+  .uc-section.cream { background: var(--cream); }
+
+  .uc-head {
+    display: grid;
+    grid-template-columns: 0.7fr 2fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    align-items: start;
+  }
+  .uc-num-block {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--gold);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .uc-tag {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-top: 14px;
+  }
+  .uc-title {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+    color: var(--ink);
+  }
+  .uc-promise {
+    font-size: 1.15rem;
+    color: var(--ink);
+    line-height: 1.55;
+    font-weight: 500;
+    max-width: 58ch;
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 820px) {
+    .uc-head { grid-template-columns: 1fr; gap: 1.25rem; }
+  }
+
+  /* Detail grid */
+  .uc-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .uc-block {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(1.5rem, 2.4vw, 2rem);
+  }
+  .uc-section.warm .uc-block { background: var(--cream); }
+  .uc-section.cream .uc-block { background: var(--cream-warm); border-color: transparent; }
+  .uc-block-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+  }
+  .uc-block h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+  .uc-block p, .uc-block li {
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .uc-block ul { margin-top: 6px; }
+  .uc-block ul li {
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+  }
+  .uc-block ul li::before {
+    content: '·';
+    color: var(--gold-deep);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .uc-block.full { grid-column: 1 / -1; }
+  .uc-block.dark {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--cream);
+  }
+  .uc-block.dark .uc-block-eyebrow { color: var(--gold); }
+  .uc-block.dark h3 { color: var(--cream); }
+  .uc-block.dark p, .uc-block.dark li { color: rgba(250,249,245,0.82); }
+  .uc-block.dark ul li::before { color: var(--gold); }
+
+  /* Numbered approval steps */
+  .uc-steps {
+    list-style: none;
+    counter-reset: ucstep;
+    margin-top: 8px;
+  }
+  .uc-steps li {
+    counter-increment: ucstep;
+    padding: 10px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 0.97rem;
+    line-height: 1.5;
+  }
+  .uc-steps li::before {
+    content: counter(ucstep, decimal-leading-zero);
+    font-family: 'Newsreader', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold);
+    flex-shrink: 0;
+    line-height: 1.4;
+    width: 28px;
+  }
+
+  @media (max-width: 720px) {
+    .uc-detail { grid-template-columns: 1fr; }
+  }
+
+  /* CTA */
+  .cta-strip { background: var(--ink); color: var(--cream); padding: clamp(3rem, 6vw, 5rem) 0; }
+  .cta-strip-inner {
+    display: grid;
+    grid-template-columns: 1.4fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  .cta-strip h2 { color: var(--cream); font-size: clamp(1.8rem, 3.4vw, 2.6rem); max-width: 22ch; }
+  .cta-strip h2 em { color: var(--gold); }
+  .cta-strip p { color: rgba(250,249,245,0.7); max-width: 44ch; margin-top: 12px; }
+  @media (max-width: 720px) { .cta-strip-inner { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Melissa Honeycutt<span class="dot">.</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="use-cases.html" aria-current="page">Use Cases</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Review</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="document.getElementById('nav').classList.toggle('open'); this.setAttribute('aria-expanded', document.getElementById('nav').classList.contains('open'))">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- PAGE HERO ───────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom: 22px;">Real estate AI use cases</div>
+    <h1>Sample systems for <em>real estate businesses.</em></h1>
+    <p class="lede">These examples show the types of AI-supported systems I design for real estate agents, teams, and small brokerages. Each system is built around a real business problem — with human review points and professional judgment kept in place.</p>
+    <div class="frame">
+      <strong>About these examples:</strong> these are sample systems based on common real estate business problems, not client results. They show how a system would be designed and where human review fits — so you can picture what working together actually looks like.
+    </div>
+  </div>
+</section>
+
+<!-- USE CASE 1: LEAD FOLLOW-UP ──────────────────────────────────── -->
+<section class="uc-section warm" id="lead-follow-up">
+  <div class="wrap">
+    <div class="uc-head">
+      <div>
+        <div class="uc-num-block">01</div>
+        <span class="uc-tag">Sample system</span>
+      </div>
+      <div>
+        <h2 class="uc-title">AI Lead Follow-Up System for Real Estate Agents</h2>
+        <p class="uc-promise">Turn scattered leads into a daily follow-up system that tells the agent who needs attention, why they matter, and what to say next.</p>
+      </div>
+    </div>
+
+    <div class="uc-detail">
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">The problem</div>
+        <p>An agent gets leads from open houses, referrals, website forms, and social media. Follow-up depends on memory, inbox searches, and scattered CRM notes. Warm leads get treated the same as cold leads. There's no reliable way to know who needs attention first — and warm leads quietly go cold.</p>
+      </div>
+
+      <div class="uc-block">
+        <div class="uc-block-eyebrow">System designed</div>
+        <h3>What the workflow does</h3>
+        <p>A lead follow-up workflow that categorizes leads by type, source, timeline, and next step. It creates a daily lead priority list, drafts follow-up messages, summarizes key notes, and reminds the agent when a human call is needed.</p>
+      </div>
+
+      <div class="uc-block">
+        <div class="uc-block-eyebrow">What AI does</div>
+        <h3>The repetitive work</h3>
+        <ul>
+          <li>Summarize lead notes</li>
+          <li>Draft personalized text and email follow-up</li>
+          <li>Categorize lead type and timeline</li>
+          <li>Identify the next best action</li>
+          <li>Create a daily priority brief</li>
+          <li>Turn open house notes into CRM-ready summaries</li>
+        </ul>
+      </div>
+
+      <div class="uc-block dark">
+        <div class="uc-block-eyebrow">What stays human</div>
+        <h3>The agent</h3>
+        <ul>
+          <li>Reviews all client-facing messages</li>
+          <li>Makes the call</li>
+          <li>Confirms motivation and timing</li>
+          <li>Handles agency, compensation, pricing, and representation</li>
+          <li>Decides whether the lead is worth continued follow-up</li>
+        </ul>
+      </div>
+
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">Approval workflow</div>
+        <h3>How the system stays under control</h3>
+        <ol class="uc-steps">
+          <li>AI drafts the follow-up message or summary.</li>
+          <li>The agent reviews and edits before anything goes to a client.</li>
+          <li>The agent approves and sends from their own inbox or text app.</li>
+          <li>The system logs the follow-up task or note.</li>
+          <li>Anything involving agency, pricing, negotiation, or legal interpretation stays with the agent.</li>
+        </ol>
+      </div>
+
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">Expected outcome</div>
+        <p>A clearer daily follow-up process, faster response time, and a more organized view of which leads need attention. The system reduces blank-screen writing, makes follow-up more consistent, and keeps the agent in control of client-facing communication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASE 2: LISTING MARKETING ───────────────────────────────── -->
+<section class="uc-section cream" id="listing-marketing">
+  <div class="wrap">
+    <div class="uc-head">
+      <div>
+        <div class="uc-num-block">02</div>
+        <span class="uc-tag">Sample system</span>
+      </div>
+      <div>
+        <h2 class="uc-title">AI Listing Marketing System for Real Estate Agents</h2>
+        <p class="uc-promise">Turn one property intake into a complete listing marketing package — MLS, email, social media, video, and open house promotion.</p>
+      </div>
+    </div>
+
+    <div class="uc-detail">
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">The problem</div>
+        <p>Agents need listing descriptions, social posts, email copy, video scripts, open house promotion, and property highlights — but creating all of it manually takes too long. The listing goes live before the marketing catches up, and the launch window underperforms.</p>
+      </div>
+
+      <div class="uc-block">
+        <div class="uc-block-eyebrow">System designed</div>
+        <h3>What the workflow does</h3>
+        <p>A property intake form feeds one structured workflow that produces every listing marketing asset in coordinated voice and format — ready for the agent to review, edit, and approve before it goes live.</p>
+      </div>
+
+      <div class="uc-block">
+        <div class="uc-block-eyebrow">What AI does</div>
+        <h3>The repetitive work</h3>
+        <ul>
+          <li>MLS-ready property descriptions</li>
+          <li>Social captions and post drafts</li>
+          <li>Email and SMS announcement copy</li>
+          <li>Video and reel script outlines</li>
+          <li>Open house promotion content</li>
+          <li>Property highlight sheets</li>
+        </ul>
+      </div>
+
+      <div class="uc-block dark">
+        <div class="uc-block-eyebrow">What stays human</div>
+        <h3>The agent</h3>
+        <ul>
+          <li>Verifies all property facts and details</li>
+          <li>Reviews fair housing and compliance language</li>
+          <li>Approves pricing and positioning</li>
+          <li>Edits voice and tone for the local market</li>
+          <li>Approves every asset before it goes live</li>
+        </ul>
+      </div>
+
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">Approval workflow</div>
+        <h3>How the system stays under control</h3>
+        <ol class="uc-steps">
+          <li>The agent fills out one structured property intake.</li>
+          <li>AI drafts every marketing asset from that single intake.</li>
+          <li>The agent reviews and edits each asset.</li>
+          <li>The agent approves what goes live and what doesn't.</li>
+          <li>Compliance-sensitive language (fair housing, fact claims) gets reviewed before publish.</li>
+        </ol>
+      </div>
+
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">Expected outcome</div>
+        <p>Listings launch with a complete, coordinated marketing package — without spending a day building it from scratch. The agent keeps full editorial control while reclaiming the hours that used to disappear into copywriting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASE 3: BUYER CONSULTATION ──────────────────────────────── -->
+<section class="uc-section warm" id="buyer-consultation">
+  <div class="wrap">
+    <div class="uc-head">
+      <div>
+        <div class="uc-num-block">03</div>
+        <span class="uc-tag">Sample system</span>
+      </div>
+      <div>
+        <h2 class="uc-title">AI Buyer Consultation &amp; Client Communication System</h2>
+        <p class="uc-promise">Turn buyer intake notes, showing feedback, and process questions into a clearer client communication system that helps the agent show value — before and after the buyer agreement.</p>
+      </div>
+    </div>
+
+    <div class="uc-detail">
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">The problem</div>
+        <p>Buyer agency conversations are harder than they used to be. Agents need to explain their value earlier, prepare stronger consultations, and communicate clearly throughout the buyer journey — but the prep work is inconsistent and the communication tools are scattered.</p>
+      </div>
+
+      <div class="uc-block">
+        <div class="uc-block-eyebrow">System designed</div>
+        <h3>What the workflow does</h3>
+        <p>A buyer-side workflow that prepares the consultation, structures the conversation, and feeds the post-consultation communication — so every buyer sees consistent value from intake through close.</p>
+      </div>
+
+      <div class="uc-block">
+        <div class="uc-block-eyebrow">What AI does</div>
+        <h3>The repetitive work</h3>
+        <ul>
+          <li>Consultation agendas built from buyer intake</li>
+          <li>Buyer education materials and explainers</li>
+          <li>Property comparison summaries</li>
+          <li>Showing recaps and feedback summaries</li>
+          <li>Follow-up message drafts after each step</li>
+          <li>Timeline and process overviews</li>
+        </ul>
+      </div>
+
+      <div class="uc-block dark">
+        <div class="uc-block-eyebrow">What stays human</div>
+        <h3>The agent</h3>
+        <ul>
+          <li>Handles representation and agency conversations</li>
+          <li>Discusses compensation</li>
+          <li>Gives pricing and offer strategy advice</li>
+          <li>Runs the actual consultation conversation</li>
+          <li>Approves every client-facing message before sending</li>
+        </ul>
+      </div>
+
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">Approval workflow</div>
+        <h3>How the system stays under control</h3>
+        <ol class="uc-steps">
+          <li>The agent fills out a buyer intake or imports notes.</li>
+          <li>AI drafts the consultation agenda, education materials, and follow-up.</li>
+          <li>The agent reviews and edits before the consultation.</li>
+          <li>The agent runs the conversation — agency, compensation, and strategy stay with the agent.</li>
+          <li>Follow-up communication is drafted by AI and approved by the agent before sending.</li>
+        </ol>
+      </div>
+
+      <div class="uc-block full">
+        <div class="uc-block-eyebrow">Expected outcome</div>
+        <p>Stronger consultations, more consistent client communication, and a clearer way to show value early in the buyer relationship — without the agent having to rebuild materials for every new buyer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA ─────────────────────────────────────────────────────────── -->
+<section class="cta-strip">
+  <div class="wrap cta-strip-inner">
+    <div>
+      <h2>Which use case fits <em>your business?</em></h2>
+      <p>An AI Business Systems Review is how we find out — looking at your actual leads, listings, clients, and tools to identify the highest-value place to start.</p>
+    </div>
+    <a href="contact.html" class="btn btn-gold">Book a Systems Review <span class="arrow">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-name">Melissa Honeycutt</div>
+        <p class="footer-tag">AI implementation for real estate agents, teams, and small brokerages. Built by a licensed Florida broker with operations and instruction experience.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:melissalhoneycutt@gmail.com">melissalhoneycutt@gmail.com</a></li>
+          <li><a href="contact.html">Book a Systems Review</a></li>
+          <li><a href="https://www.linkedin.com/in/melissahoneycutt/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@HotFlashHomePod" target="_blank" rel="noopener">Podcast</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div>© 2026 Melissa Honeycutt · Licensed Florida Broker</div>
+      <div>AI supports the work. You stay in control.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

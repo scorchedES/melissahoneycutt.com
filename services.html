@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — AI Implementation for Real Estate Businesses | Melissa Honeycutt</title>
+<meta name="description" content="Five focused AI implementation services for real estate agents, teams, and small brokerages: Systems Review, Implementation Roadmap, Workflow Build, Guardrails Setup, Systems Oversight.">
+<link rel="canonical" href="https://melissahoneycutt.com/services.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Melissa Honeycutt">
+<meta property="og:title" content="Services - AI Implementation for Real Estate Businesses | Melissa Honeycutt">
+<meta property="og:description" content="Five focused AI implementation services for real estate agents, teams, and small brokerages: Systems Review, Implementation Roadmap, Workflow Build, Guardrails Setup, Systems Oversight.">
+<meta property="og:url" content="https://melissahoneycutt.com/services.html">
+<meta property="og:image" content="https://melissahoneycutt.com/assets/images/melissa-honeycutt.png">
+<meta property="og:image:alt" content="Portrait of Melissa Honeycutt, licensed Florida broker and AI implementation strategist">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Services - AI Implementation for Real Estate Businesses | Melissa Honeycutt">
+<meta name="twitter:description" content="Five focused AI implementation services for real estate agents, teams, and small brokerages: Systems Review, Implementation Roadmap, Workflow Build, Guardrails Setup, Systems Oversight.">
+<meta name="twitter:image" content="https://melissahoneycutt.com/assets/images/melissa-honeycutt.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {"@type": "Service", "position": 1, "name": "AI Business Systems Review", "description": "A focused review of where AI can help inside your real estate business.", "provider": {"@type": "Person", "name": "Melissa Honeycutt"}},
+    {"@type": "Service", "position": 2, "name": "AI Implementation Roadmap", "description": "A clear plan for what to build, what to automate, what to keep human, and what to do first.", "provider": {"@type": "Person", "name": "Melissa Honeycutt"}},
+    {"@type": "Service", "position": 3, "name": "One Workflow Build", "description": "A focused build around one specific real estate business process.", "provider": {"@type": "Person", "name": "Melissa Honeycutt"}},
+    {"@type": "Service", "position": 4, "name": "AI Guardrails Setup", "description": "Practical rules for AI use, human review, data handling, and client-facing communication.", "provider": {"@type": "Person", "name": "Melissa Honeycutt"}},
+    {"@type": "Service", "position": 5, "name": "AI Systems Oversight", "description": "Ongoing support after an AI workflow or system is launched.", "provider": {"@type": "Person", "name": "Melissa Honeycutt"}}
+  ]
+}
+</script>
+
+<style>
+  .page-hero {
+    padding-top: clamp(3rem, 6vw, 5rem);
+    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+    border-bottom: 1px solid var(--border);
+  }
+  .page-hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.04;
+    max-width: 14ch;
+    margin-bottom: 24px;
+  }
+  .page-hero h1 em { color: var(--gold-deep); font-style: normal; }
+  .page-hero .lede { max-width: 52ch; font-size: clamp(1.1rem, 1.5vw, 1.25rem); color: var(--ink); }
+
+  .invest-note {
+    background: var(--cream-warm);
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: var(--ink);
+    line-height: 1.6;
+    max-width: 720px;
+  }
+  .invest-note strong { font-weight: 600; }
+
+  /* Services list — long-form */
+  .svc { background: var(--cream); }
+  .svc-item {
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 0.7fr 2fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+  .svc-item:first-child { border-top: 1px solid var(--border); }
+  .svc-num {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    color: var(--gold);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .svc-tag {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-top: 14px;
+  }
+  .svc-name {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.3rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .svc-best {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 58ch;
+  }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 36px;
+    margin-bottom: 28px;
+  }
+  .svc-block h4 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 12px;
+  }
+  .svc-block p, .svc-block li {
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .svc-block ul li {
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+  }
+  .svc-block ul li::before {
+    content: '·';
+    color: var(--gold-deep);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .svc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 24px;
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: background 0.15s;
+  }
+  .svc-cta:hover { background: #000; }
+  .svc-cta .arrow { transition: transform 0.15s; }
+  .svc-cta:hover .arrow { transform: translateX(3px); }
+  @media (max-width: 820px) {
+    .svc-item { grid-template-columns: 1fr; gap: 1.5rem; }
+    .svc-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  /* Human Review Workflow */
+  .hrw { background: var(--ink); color: var(--cream); }
+  .hrw .eyebrow { color: var(--gold); }
+  .hrw .eyebrow::before { background: var(--gold); }
+  .hrw h2 {
+    color: var(--cream);
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    line-height: 1.05;
+    margin-bottom: 30px;
+    max-width: 18ch;
+  }
+  .hrw h2 em { color: var(--gold); }
+  .hrw-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+  .hrw-pull {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+    line-height: 1.5;
+    color: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding-left: 22px;
+    max-width: 36ch;
+    font-style: italic;
+  }
+  .hrw-steps {
+    counter-reset: step;
+  }
+  .hrw-steps li {
+    counter-increment: step;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(250,249,245,0.12);
+    font-size: 1.02rem;
+    color: rgba(250,249,245,0.88);
+    line-height: 1.5;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+  }
+  .hrw-steps li::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: 'Newsreader', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 36px;
+  }
+  .hrw-steps li:last-child { border-bottom: none; }
+  @media (max-width: 820px) { .hrw-grid { grid-template-columns: 1fr; } }
+
+  /* Post-launch + scope */
+  .post { background: var(--cream); }
+  .post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+  .post-card {
+    background: var(--cream-warm);
+    border-radius: 18px;
+    padding: clamp(1.75rem, 2.4vw, 2.25rem);
+  }
+  .post-card h3 {
+    font-family: 'Newsreader', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.015em;
+  }
+  .post-card p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  @media (max-width: 720px) { .post-grid { grid-template-columns: 1fr; } }
+
+  /* Who this is for */
+  .who { background: var(--cream-warm); }
+  .who h2 { font-size: clamp(2rem, 3.6vw, 2.6rem); line-height: 1.05; margin-bottom: 30px; max-width: 18ch; }
+  .who h2 em { color: var(--gold-deep); }
+  .who-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 40px;
+    border-top: 1px solid var(--border);
+  }
+  .who-list li {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.02rem;
+    color: var(--ink);
+    line-height: 1.5;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .who-list li::before {
+    content: '✓';
+    color: var(--gold-deep);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  @media (max-width: 720px) { .who-list { grid-template-columns: 1fr; } }
+
+  /* CTA */
+  .cta-strip { background: var(--ink); color: var(--cream); padding: clamp(3rem, 6vw, 5rem) 0; }
+  .cta-strip-inner {
+    display: grid;
+    grid-template-columns: 1.4fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  .cta-strip h2 { color: var(--cream); font-size: clamp(1.8rem, 3.4vw, 2.6rem); max-width: 22ch; }
+  .cta-strip h2 em { color: var(--gold); }
+  .cta-strip p { color: rgba(250,249,245,0.7); max-width: 44ch; margin-top: 12px; }
+  @media (max-width: 720px) { .cta-strip-inner { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Melissa Honeycutt<span class="dot">.</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Review</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="document.getElementById('nav').classList.toggle('open'); this.setAttribute('aria-expanded', document.getElementById('nav').classList.contains('open'))">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- PAGE HERO ───────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom: 22px;">Services</div>
+    <h1>Five focused services. <em>Start with a review.</em></h1>
+    <p class="lede">Each service stands on its own. Most engagements begin with an AI Business Systems Review so we can identify the highest-value use case before building anything.</p>
+    <div class="invest-note">
+      <strong>Investment depends on scope, tools, number of workflows, and level of implementation support.</strong> Most projects begin with an AI Business Systems Review so we can identify the highest-value use case before building.
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES LONG-FORM ──────────────────────────────────────────── -->
+<section class="svc">
+  <div class="wrap">
+
+    <!-- 01 REVIEW -->
+    <article class="svc-item" id="review">
+      <div>
+        <div class="svc-num">01</div>
+        <span class="svc-tag">Start here</span>
+      </div>
+      <div>
+        <h2 class="svc-name">AI Business Systems Review</h2>
+        <p class="svc-best">Best first step for agents, teams, or broker-owners who want to understand where AI belongs in their business before investing in a build.</p>
+        <div class="svc-grid">
+          <div class="svc-block">
+            <h4>What I review</h4>
+            <ul>
+              <li>Lead follow-up</li>
+              <li>Client communication</li>
+              <li>Listing marketing</li>
+              <li>Transaction visibility</li>
+              <li>Past client nurture</li>
+              <li>CRM habits and current tools</li>
+            </ul>
+          </div>
+          <div class="svc-block">
+            <h4>What you receive</h4>
+            <ul>
+              <li>The highest-value AI use cases for your business</li>
+              <li>What to build first and what to keep human</li>
+              <li>A short, plain-English summary you can act on</li>
+              <li>A clear next step — even if we don't work together after</li>
+            </ul>
+          </div>
+        </div>
+        <a href="contact.html" class="svc-cta">Book a Systems Review <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <!-- 02 ROADMAP -->
+    <article class="svc-item" id="roadmap">
+      <div>
+        <div class="svc-num">02</div>
+        <span class="svc-tag">Plan to build</span>
+      </div>
+      <div>
+        <h2 class="svc-name">AI Implementation Roadmap</h2>
+        <p class="svc-best">Best for real estate businesses that want a clear plan before choosing tools, automations, or vendors.</p>
+        <div class="svc-grid">
+          <div class="svc-block">
+            <h4>What I build</h4>
+            <ul>
+              <li>Prioritized use case list</li>
+              <li>Workflow map for the first build</li>
+              <li>Tooling, integrations, and review points</li>
+              <li>Risk assessment and sequencing</li>
+              <li>Build timeline and budget guidance</li>
+            </ul>
+          </div>
+          <div class="svc-block">
+            <h4>What you receive</h4>
+            <ul>
+              <li>A client-ready AI implementation plan</li>
+              <li>Decisions logged with reasoning</li>
+              <li>30-minute consultation to walk it through</li>
+              <li>Hand-off-ready document if you build elsewhere</li>
+            </ul>
+          </div>
+        </div>
+        <a href="contact.html" class="svc-cta">Start a Roadmap <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <!-- 03 WORKFLOW -->
+    <article class="svc-item" id="workflow">
+      <div>
+        <div class="svc-num">03</div>
+        <span class="svc-tag">Build one thing</span>
+      </div>
+      <div>
+        <h2 class="svc-name">One Workflow Build</h2>
+        <p class="svc-best">Best for one defined process — such as lead follow-up, listing launch content, buyer consultation prep, client updates, or transaction status briefs.</p>
+        <div class="svc-grid">
+          <div class="svc-block">
+            <h4>What I build</h4>
+            <ul>
+              <li>One workflow with one primary outcome</li>
+              <li>Templates, prompts, and approval steps</li>
+              <li>Integration with your existing tools</li>
+              <li>Testing before launch</li>
+              <li>Short hand-off guide</li>
+            </ul>
+          </div>
+          <div class="svc-block">
+            <h4>What stays human</h4>
+            <ul>
+              <li>Approval of client-facing language</li>
+              <li>Pricing, negotiation, agency conversations</li>
+              <li>Final decisions on representation</li>
+              <li>Anything compliance-sensitive</li>
+            </ul>
+          </div>
+        </div>
+        <a href="contact.html" class="svc-cta">Plan a Workflow Build <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <!-- 04 GUARDRAILS -->
+    <article class="svc-item" id="guardrails">
+      <div>
+        <div class="svc-num">04</div>
+        <span class="svc-tag">Set the rules</span>
+      </div>
+      <div>
+        <h2 class="svc-name">AI Guardrails Setup</h2>
+        <p class="svc-best">Best for teams or brokerages that need clear rules for AI use, human review, data handling, and client-facing communication.</p>
+        <div class="svc-grid">
+          <div class="svc-block">
+            <h4>What I set up</h4>
+            <ul>
+              <li>What AI can draft, summarize, or organize</li>
+              <li>What requires human approval before sending</li>
+              <li>What information should not be entered into AI tools</li>
+              <li>Where compliance-sensitive review must happen</li>
+              <li>Training notes for the team</li>
+            </ul>
+          </div>
+          <div class="svc-block">
+            <h4>Why it matters</h4>
+            <p>AI adoption is already widespread. The risk is no longer whether your team uses AI — it's whether they use it without rules. Guardrails make AI safer, more useful, and easier for your team to adopt confidently.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="svc-cta">Set up Guardrails <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+    <!-- 05 OVERSIGHT -->
+    <article class="svc-item" id="oversight">
+      <div>
+        <div class="svc-num">05</div>
+        <span class="svc-tag">Ongoing</span>
+      </div>
+      <div>
+        <h2 class="svc-name">AI Systems Oversight</h2>
+        <p class="svc-best">Best for agents, teams, or brokerages that want ongoing support after launch.</p>
+        <div class="svc-grid">
+          <div class="svc-block">
+            <h4>What I monitor</h4>
+            <ul>
+              <li>What's working in the workflow</li>
+              <li>What's breaking or drifting</li>
+              <li>Prompt and template refinement</li>
+              <li>SOP and documentation updates</li>
+              <li>New use case opportunities</li>
+            </ul>
+          </div>
+          <div class="svc-block">
+            <h4>How it works</h4>
+            <p>Most builds include a short post-launch review window. Ongoing AI Systems Oversight is available for agents, teams, or brokerages that want continued refinement and workflow monitoring as the business evolves.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="svc-cta">Discuss Ongoing Oversight <span class="arrow">→</span></a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- HUMAN REVIEW WORKFLOW ───────────────────────────────────────── -->
+<section class="hrw">
+  <div class="wrap">
+    <div class="hrw-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom: 22px;">Human Review Workflow</div>
+        <h2>How AI and your judgment <em>work together.</em></h2>
+        <blockquote class="hrw-pull">"AI supports the repetitive work. The agent stays in control of the relationship, advice, strategy, and approval."</blockquote>
+      </div>
+      <ol class="hrw-steps">
+        <li>AI drafts or summarizes.</li>
+        <li>The agent reviews the output.</li>
+        <li>The agent edits anything that needs professional judgment.</li>
+        <li>The agent approves client-facing language before it is sent.</li>
+        <li>The system logs the task, note, or follow-up.</li>
+        <li>Anything involving agency, legal interpretation, pricing strategy, compensation, negotiation, or broker supervision stays human.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- POST-LAUNCH + SCOPE ─────────────────────────────────────────── -->
+<section class="post">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="head-l">
+        <div class="eyebrow">After the build</div>
+        <h2>What happens once the system <em>goes live.</em></h2>
+      </div>
+      <div class="head-r">
+        <p>Every build ships with a clear scope, a short post-launch review, and a path for ongoing oversight if you want it.</p>
+      </div>
+    </div>
+    <div class="post-grid">
+      <div class="post-card">
+        <h3>Post-launch support</h3>
+        <p>AI systems need review after they meet real business conditions. Most builds include a short post-launch review window. After that, ongoing AI Systems Oversight is available for agents, teams, or brokerages that want continued support, refinement, and workflow monitoring.</p>
+      </div>
+      <div class="post-card">
+        <h3>Scope boundaries</h3>
+        <p>A workflow build includes one defined process with one primary outcome. Additional workflows, major scope changes, new platforms, or expanded automations are handled as separate phases — so scope, budget, and risk stay clear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR ─────────────────────────────────────────────── -->
+<section class="who">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom: 22px;">Who this is for</div>
+    <h2>Built for the way real estate businesses <em>actually work.</em></h2>
+    <ul class="who-list">
+      <li>Solo agents who want more leverage</li>
+      <li>Teams that need consistent systems</li>
+      <li>Broker-owners who want AI guardrails</li>
+      <li>Operations leaders who need visibility across tools, people, and processes</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA ─────────────────────────────────────────────────────────── -->
+<section class="cta-strip">
+  <div class="wrap cta-strip-inner">
+    <div>
+      <h2>Not sure which service <em>fits?</em></h2>
+      <p>Start with an AI Business Systems Review. It's how most engagements begin and how we figure out which next step is actually worth your money.</p>
+    </div>
+    <a href="contact.html" class="btn btn-gold">Book a Systems Review <span class="arrow">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-name">Melissa Honeycutt</div>
+        <p class="footer-tag">AI implementation for real estate agents, teams, and small brokerages. Built by a licensed Florida broker with operations and instruction experience.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:melissalhoneycutt@gmail.com">melissalhoneycutt@gmail.com</a></li>
+          <li><a href="contact.html">Book a Systems Review</a></li>
+          <li><a href="https://www.linkedin.com/in/melissahoneycutt/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@HotFlashHomePod" target="_blank" rel="noopener">Podcast</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div>© 2026 Melissa Honeycutt · Licensed Florida Broker</div>
+      <div>AI supports the work. You stay in control.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
